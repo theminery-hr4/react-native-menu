@@ -68,6 +68,7 @@ module.exports = (React, ReactNative, { constants, model, styles }) => {
 
         this._activeMenuHooks = this._menus[name];
         this._activeMenuHooks && this._activeMenuHooks.didOpen();
+        this.props.onOpen && this.props.onOpen();
       });
     },
     closeMenu() {

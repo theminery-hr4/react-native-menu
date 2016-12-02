@@ -93,6 +93,7 @@ Methods:
 Props:
 
 - `onSelect` -- This function is called with the value the `MenuOption` that has been selected by the user
+- `onOpen` -- This function is called whenever the Menu is displayed
 
 ### MenuTrigger
 
