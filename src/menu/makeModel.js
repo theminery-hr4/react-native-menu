@@ -1,5 +1,5 @@
-module.exports = (React) => {
-  const { shape, func } = React.PropTypes;
+module.exports = () => {
+  const { shape, func } = require('prop-types')
 
   const IMenuController = shape({
     open: func.isRequired,

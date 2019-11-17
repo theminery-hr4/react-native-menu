@@ -8,6 +8,7 @@ const {
   Text,
   View
 } = ReactNative;
+import createReactClass from 'create-react-class'
 
 import Menu, {
   MenuContext,
@@ -16,7 +17,7 @@ import Menu, {
   MenuTrigger
 } from 'react-native-menu';
 
-const Example = React.createClass({
+const Example = createReactClass({
   componentDidMount() {
     // We can use the public context API to open/close/toggle the menu.
     //setInterval(() => {
