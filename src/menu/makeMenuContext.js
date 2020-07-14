@@ -102,6 +102,11 @@ module.exports = (React, ReactNative, { constants, model, styles }) => {
 
     // Private and lifecycle methods
     getInitialState() {
+      this._menus = {};
+      this._options = {};
+      // Only do this once on initial layout.
+      this.onLayout = once(this.onLayout);
+
       return {
         openedMenu: '',
         menuOptions: null,
@@ -124,12 +129,6 @@ module.exports = (React, ReactNative, { constants, model, styles }) => {
         makeName: this._makeName
       };
       return { menuController };
-    },
-    componentWillMount() {
-      this._menus = {};
-      this._options = {};
-      // Only do this once on initial layout.
-      this.onLayout = once(this.onLayout);
     },
     handleBackAndroid() {
       if (this.isMenuOpen()){

@@ -30,8 +30,9 @@ module.exports = (React, ReactNative, { model }) => {
     getChildContext() {
       return { getClosestMenuName: () => this._name };
     },
-    componentWillMount() {
+    getInitialState() {
       this._name = this.props.name || this.context.menuController.makeName();
+      return {};
     },
     componentWillUnmount() {
       this.context.menuController.unregisterMenu(this._name);
